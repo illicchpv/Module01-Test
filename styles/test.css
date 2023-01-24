@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: red;
+
+  font-size: 32px;
+  /* font-family: 'Lato', sans-serif; */
+  /* font-family: 'Nunito Sans', sans-serif; */
+  font-family: 'Open Sans', sans-serif;
+}
+
+.test-block {
+  background-color: lightgray;
+}
+
+.font11 {
+  font-family: 'Nunito Sans';
+  font-weight: 600;
+}
+
+.font12 {
+  font-family: 'Nunito Sans';
+  font-weight: 700;
+}
+
+.font13 {
+  font-family: 'Nunito Sans';
+  font-weight: 800;
+}
+
+.font14 {
+  font-family: 'Nunito Sans';
+  font-weight: 900;
+}
+
+.font21 {
+  font-family: 'Open Sans';
+  font-weight: 400;
+}
+
+.font22 {
+  font-family: 'Open Sans';
+  font-weight: 600;
+}
+
+.font23 {
+  font-family: 'Open Sans';
+  font-weight: 700;
+}
+
+.font31 {
+  font-family: 'Lato Bold';
+  font-weight: 700;
+}
