@@ -29,14 +29,58 @@ Lato Bold
     rel="stylesheet">
 
   <link rel="stylesheet" href="styles/main.css?V=1">
+  <style>
+    .ref-list h2 {
+      margin-bottom: 20px;
+    }
+
+    .ref-list .actual {
+      list-style-type: none;
+
+      /* margin-left: -40px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 15px;
+      border: 2px solid red;
+      border-radius: 20px;
+
+      list-style-position: inside;
+      list-style-type: square; */
+
+      /* padding-left: 2rem;
+      background-image: url(images/img33.png);
+      background-position: 0 0;
+      background-size: 1.6rem 1.6rem;
+      background-repeat: no-repeat; */
+
+    }
+
+    .ref-list .actual::before {
+      content: "NEW> ";
+      color: red;
+      font-weight: bold;
+      margin-left: -40px;
+    }
+
+    .ref-list pre b {
+      color: red;
+    }
+  </style>
 </head>
 
 <body>
   <div class="ref-list">
     <h2>ссылки на страницы заданий</h2>
     <ul>
-      <li><a href="test.html">перейти на стр. test.html</a></li>
+      <li class="actual"><a href="semantic.html" target="_blank">открыть стр. semantic.html - семантические теги</a><br>
+        <pre style="font-size: 14px;">
+          <b>&lt;article></b>  <b>&lt;aside></b>  <b>&lt;footer> </b>  <b>&lt;header></b>      
+          <b>&lt;main>   </b>  <b>&lt;nav>  </b>  <b>&lt;section></b>      
+          &lt;figure>  &lt;details>  &lt;figcaption>  &lt;summary>  &lt;time>  &lt;mark>?
+        </pre>
+      </li>
       <li><a href="lesson.html" target="_blank">открыть стр. lesson.html</a></li>
+      <li><a href="test.html">перейти на стр. test.html</a></li>
     </ul>
   </div>
 
