@@ -85,10 +85,14 @@ Lato Bold
         style="font-size: 14px;"><q>github&#128279;</q></a></h2>
     <ul>
       <li class="actual">
+        <a href="semantic08.html" target="_blank">08. Указываем имена для элементов -
+          (semantic08.html)</a>
+      </li>
+
+      <li>
         <a href="semantic07.html" target="_blank">07. Задаем отступы между блоками -
           (semantic07.html)</a>
       </li>
-
       <li>
         <a href="semanticCSS.html" target="_blank">06. Стилизуем текст и подключаем шрифты -
           (semanticCSS.html)</a>
@@ -108,39 +112,90 @@ Lato Bold
 
   <hr>
   <div class="test-block">
-    index.html<br>
-    MenuIcons <img src="images/MenuIcon.svg" alt="">
-    <img src="images/Burgos.svg" alt="">
-    <img src="images/shopping-cart.svg" alt="">
-    <br>
-    FooterIcon <img src="images/FooterIcon.svg" alt=""><br>
+    <style>
+      .menu-content {
+        display: flex;
+      }
+
+      .menu-item {
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+
+      .menu-item:nth-child(1) {
+        margin-left: 20px;
+      }
+
+      .menu-item input {
+        /* margin-right: 20px; */
+        display: none;
+      }
+
+      .menu-item input:checked+label {
+        background-color: brown;
+      }
+
+      .mnItems-content {
+        display: none;
+      }
+    </style>
+    <div class="menu-content">
+      <div class="menu-item">
+        <input type="radio" id="mnIcons" name="mnItems" checked onchange="fn(this)"><label for="mnIcons">Icons</label>
+      </div>
+      <div class="menu-item">
+        <input type="radio" id="mnImages" name="mnItems" onchange="fn(this)"><label for="mnImages">Images</label>
+      </div>
+      <div class="menu-item">
+        <input type="radio" id="mnFonts" name="mnItems" onchange="fn(this)"><label for="mnFonts">Fonts</label>
+      </div>
+      <script>
+        let prevCheckedId = 'mnIcons';
+        function fn(el) {
+          document.getElementById(prevCheckedId + "-content").style.display = 'none';
+          document.getElementById((prevCheckedId = el.id) + "-content").style.display = 'block';
+        }
+      </script>
+    </div>
     <hr>
-    <div class="font11">Nunito Sans SemiBold</div>
-    <div class="font12">Nunito Sans Bold</div>
-    <div class="font13">Nunito Sans ExtraBold</div>
-    <div class="font14">Nunito Sans Black</div>
+    <div id="mnIcons-content" class="mnItems-content" style="display: block;">
+      MenuIcons <img src="images/MenuIcon.svg" alt="">
+      <img src="images/Burgos.svg" alt="">
+      <img src="images/shopping-cart.svg" alt="">
+      <br>
+      FooterIcon <img src="images/FooterIcon.svg" alt=""><br>
+      <hr>
+    </div>
+    <div id="mnImages-content" class="mnItems-content">
+      <img src="images/Banner.png" alt="">
+      <hr>
+      <img src="images/img11.png" alt="">
+      <img src="images/img12.png" alt="">
+      <img src="images/img13.png" alt="">
+      <hr>
+      <img src="images/img21.png" alt="">
+      <img src="images/img22.png" alt="">
+      <img src="images/img23.png" alt="">
+      <hr>
+      <img src="images/img31.png" alt="">
+      <img src="images/img32.png" alt="">
+      <img src="images/img33.png" alt="">
+    </div>
+    <div id="mnFonts-content" class="mnItems-content">
+      <div class="font11">Nunito Sans SemiBold</div>
+      <div class="font12">Nunito Sans Bold</div>
+      <div class="font13">Nunito Sans ExtraBold</div>
+      <div class="font14">Nunito Sans Black</div>
+      <hr>
+      <!--  -->
+      <div class="font21">Open Sans Regular</div>
+      <div class="font22">Open Sans SemiBold</div>
+      <div class="font23">Open Sans Bold</div>
+      <hr>
+      <!--  -->
+      <div class="font31">Lato Bold</div>
+    </div>
     <hr>
-    <!--  -->
-    <div class="font21">Open Sans Regular</div>
-    <div class="font22">Open Sans SemiBold</div>
-    <div class="font23">Open Sans Bold</div>
-    <hr>
-    <!--  -->
-    <div class="font31">Lato Bold</div>
-    <hr>
-    <img src="images/Banner.png" alt="">
-    <hr>
-    <img src="images/img11.png" alt="">
-    <img src="images/img12.png" alt="">
-    <img src="images/img13.png" alt="">
-    <hr>
-    <img src="images/img21.png" alt="">
-    <img src="images/img22.png" alt="">
-    <img src="images/img23.png" alt="">
-    <hr>
-    <img src="images/img31.png" alt="">
-    <img src="images/img32.png" alt="">
-    <img src="images/img33.png" alt="">
     <hr>
   </div>
 </body>
