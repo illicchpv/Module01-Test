@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Мастер-класс jQuery</title>
+
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <style>
+    .btn {
+      margin-top: 0;
+      margin-left: 20%;
+    }
+
+    ol {
+      font-size: 24px;
+    }
+  </style>
+  <div class="container">
+    <ol>
+      <li><span> плавное исчезновение и появление .box по клику на кнопку</span>
+        <button type="button" class="btn btn1">Нажми сюда </button>
+        <script>
+          $('.btn1').click(function () {
+            $('.box').fadeToggle(1000);
+          })
+        </script>
+      </li>
+      <li><span>добавить "&lt;p>Этот пример сделан на jQuery&lt;/p>"" после .box</span>
+        <button type="button" class="btn btn2">Нажми сюда </button>
+        <script>
+          $('.btn2').click(function () {
+            $('.box').after("<p>Этот пример сделан на jQuery</p>");
+          });
+        </script>
+      </li>
+      <li><span>изменить текст кнопки на "Сделай клик" (*задача со звездочкой) </span>
+        <button type="button" class="btn btn3">Нажми сюда </button>
+        <script>
+          $('.btn3').click(function () {
+            $('.btn3')[0]._isChanged !== true ? $('.btn3').text("Сделай клик") : $('.btn3').text("Нажми сюда") ;
+            $('.btn3')[0]._isChanged = !$('.btn3')[0]._isChanged
+          });
+        </script>
+      </li>
+    </ol>
+  </div>
+
+  <div class="container">
+    <div class="box">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  </div>
+</body>
+
+</html>
